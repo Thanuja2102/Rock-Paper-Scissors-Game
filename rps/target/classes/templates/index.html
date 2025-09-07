@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="container">
+  <!-- 🏆 Title -->
+  <h1>Rock-Paper-Scissors 🎮</h1>
+
+  <!-- ✊✋✌️ Choice Buttons -->
+  <form action="/play" method="get">
+    <button type="submit" name="move" value="rock" class="choice-btn">🪨 Rock</button>
+    <button type="submit" name="move" value="paper" class="choice-btn">📄 Paper</button>
+    <button type="submit" name="move" value="scissors" class="choice-btn">✂️ Scissors</button>
+  </form>
+
+  <!-- 📝 Game Result -->
+  <div th:if="${result}" class="result">
+    <p><b>You:</b> <span th:text="${result.playerMove}"></span></p>
+    <p><b>Computer:</b> <span th:text="${result.computerMove}"></span></p>
+    <p><b>Outcome:</b> <span th:text="${result.outcome}"></span></p>
+  </div>
+
+  <div th:if="${message}" class="result" style="color:#ff6f61;">
+    <p><b th:text="${message}"></b></p>
+  </div>
+
+  <!-- 📊 Scoreboard -->
+  <div class="scoreboard">
+    <h2>🏆 Scoreboard</h2>
+    <table>
+      <tr>
+        <th>Player Wins</th>
+        <th>Computer Wins</th>
+        <th>Draws</th>
+      </tr>
+      <tr>
+        <td th:text="${score.playerWins}">0</td>
+        <td th:text="${score.computerWins}">0</td>
+        <td th:text="${score.draws}">0</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- 🔘 Reset Button -->
+  <form action="/reset" method="get">
+    <button type="submit" class="reset-btn">🔄 Reset Scoreboard</button>
+  </form>
+</div>
+</body>
+</html>
+

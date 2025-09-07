@@ -1,0 +1,101 @@
+/* 🎮 General Reset */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* 🎯 Main Game Container */
+.container {
+    background: rgba(0, 0, 0, 0.65);
+    padding: 2rem 3rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 600px;
+    max-width: 95%;
+}
+
+/* 🏆 Title */
+h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    color: #ffda79;
+}
+
+/* ✊✋✌️ Choice Buttons */
+.choice-btn {
+    background: #444;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+.choice-btn:hover {
+    background: #ffda79;
+    color: #111;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 15px rgba(255, 218, 121, 0.5);
+}
+
+/* 📊 Scoreboard */
+.scoreboard {
+    margin-top: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 12px;
+    font-size: 1rem;
+}
+.scoreboard table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    color: #fff;
+}
+.scoreboard th, .scoreboard td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.5rem;
+    text-align: center;
+}
+.scoreboard th {
+    color: #ffda79;
+}
+
+/* 📝 Game Result */
+.result {
+    margin-top: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #00ffb3;
+}
+
+/* 🔘 Reset Button */
+.reset-btn {
+    margin-top: 1.5rem;
+    background: #e74c3c;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+.reset-btn:hover {
+    background: #ff6f61;
+    transform: scale(1.05);
+}
+
