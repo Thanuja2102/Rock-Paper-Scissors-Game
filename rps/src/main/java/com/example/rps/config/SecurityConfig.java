@@ -46,16 +46,17 @@ public class SecurityConfig {
                         .anyRequest().authenticated()
                 )
                 .formLogin(form -> form
-                        //.loginPage("/login") // you can re-enable this if you want your custom login.html
-                        .defaultSuccessUrl("/", true)   // ✅ redirect to index.html (game) after login
+                       
+                        .defaultSuccessUrl("/", true)  
                         .permitAll()
                 )
                 .logout(logout -> logout.permitAll());
 
-        // H2 console support
+      
         http.csrf(csrf -> csrf.disable());
         http.headers(headers -> headers.frameOptions().disable());
 
         return http.build();
     }
 }
+
